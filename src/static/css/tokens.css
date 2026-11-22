@@ -1,0 +1,85 @@
+/* ===== Дизайн-токены: светлая и тёмная темы ===== */
+
+:root {
+  color-scheme: light;
+
+  /* Бренд (зелёная рампа) */
+  --green-050: #ebfbee;
+  --green-100: #d3f9d8;
+  --green-200: #b2f2bb;
+  --green-500: #37b24d;
+  --green-600: #2f9e44;
+  --green-700: #2b8a3e;
+  --green-800: #276b39;
+
+  --brand: var(--green-600);
+  --brand-strong: var(--green-700);
+  --brand-soft: var(--green-050);
+  --brand-tint: color-mix(in srgb, var(--green-600) 10%, transparent);
+  --grad: linear-gradient(135deg, #2f9e44 0%, #0ca678 100%);
+
+  /* Поверхности и текст */
+  --bg: #f4f8f5;
+  --card: #ffffff;
+  --card-soft: #f7faf8;
+  --text: #1b2b22;
+  --text-2: #5d7267;
+  --text-3: #8aa094;
+  --border: #dde9e1;
+  --border-strong: #c6d8cc;
+
+  /* Статусы (никогда не используются как цвета «серий») */
+  --good: #0ca30c;
+  --warning: #fab219;
+  --serious: #ec835a;
+  --critical: #d03b3b;
+
+  /* Цвета типов событий — валидированная категориальная палитра
+     (проверена CVD/контраст; всегда сопровождается иконкой и подписью).
+     Порядок важен: соседние пары не должны путаться при дальтонизме. */
+  --type-water_cleanup: #2a78d6;  /* слот 1: blue  */
+  --type-cleanup:       #1baf7a;  /* слот 2: aqua  */
+  --type-recycling:     #eda100;  /* слот 3: yellow */
+  --type-eco_lecture:   #e87ba4;  /* слот 4: magenta */
+  --type-tree_planting: #008300;  /* слот 5: green */
+
+  --radius-sm: 10px;
+  --radius: 14px;
+  --radius-lg: 20px;
+  --shadow-sm: 0 1px 2px rgba(23, 52, 33, 0.06);
+  --shadow-md: 0 6px 24px rgba(23, 52, 33, 0.1);
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --brand: #51cf66;
+  --brand-strong: #69db7c;
+  --brand-soft: #13291a;
+  --brand-tint: color-mix(in srgb, #51cf66 12%, transparent);
+  --grad: linear-gradient(135deg, #0f5c2a 0%, #0b6b52 100%);
+
+  --bg: #0f1812;
+  --card: #16231b;
+  --card-soft: #1b2b21;
+  --text: #e4efe8;
+  --text-2: #9db4a6;
+  --text-3: #6f8878;
+  --border: #24342b;
+  --border-strong: #2f4537;
+
+  --good: #0ca30c;
+  --warning: #fab219;
+  --serious: #ec835a;
+  --critical: #e66767;
+
+  --type-water_cleanup: #3987e5;
+  --type-cleanup:       #199e70;
+  --type-recycling:     #c98500;
+  --type-eco_lecture:   #d55181;
+  --type-tree_planting: #0ca30c;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 6px 24px rgba(0, 0, 0, 0.45);
+}
