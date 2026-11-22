@@ -1,0 +1,26 @@
+{
+  "model": "deepseek-v4-pro",
+  "mode": "agentic",
+  "date": "2026-11-22",
+  "task": "world-savior-app: клиент-серверное приложение с REST API и авторизацией (EcoSavior)",
+  "stack": {
+    "backend": "Python 3.12 + FastAPI + SQLAlchemy 2.0 + SQLite",
+    "validation": "Pydantic v2",
+    "auth": "PyJWT HS256 + bcrypt (refresh-ротация)",
+    "frontend": "Vanilla JS SPA (без сборки), hash-роутер",
+    "tests": "pytest + httpx (35 тестов)",
+    "demo": "Playwright 1.58.0 (кэш chromium-1208/ffmpeg-1011) + imageio-ffmpeg"
+  },
+  "tools": [
+    "Bash", "Read", "Write", "Edit", "Skill (dataviz, run)",
+    "Playwright (Python): скриншоты, E2E-верификация, запись видео",
+    "CVD/контраст-валидатор палитры (node-скрипт из скилла dataviz)"
+  ],
+  "decisions": {
+    "type": "клиент-серверное приложение с REST API и авторизацией",
+    "theme": "EcoSavior — платформа экологических инициатив (эко-события, волонтёры, баллы, рейтинг)",
+    "dates": "ISO 8601 строки в UTC (без таймзонных багов в SQLite)",
+    "search": "кастомная SQL-функция lower_utf8 (кириллица)",
+    "palette": "валидированные категориальные цвета типов + один оттенок в диаграмме"
+  }
+}

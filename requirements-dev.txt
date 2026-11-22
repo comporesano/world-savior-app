@@ -1,0 +1,8 @@
+-r requirements.txt
+pytest>=8.3,<9
+httpx>=0.27,<1
+# Версия зафиксирована под кэш браузеров Playwright (chromium-1208, ffmpeg-1011);
+# иначе `playwright install chromium` будет качать браузер заново.
+playwright==1.58.0
+# ffmpeg для конвертации demo.webm -> demo.mp4
+imageio-ffmpeg>=0.8
